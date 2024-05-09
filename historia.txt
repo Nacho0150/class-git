@@ -1,3 +1,5 @@
 Bienvenido 
 
 mi nombre es Ignacio
+
+estoy estudiando Programación
