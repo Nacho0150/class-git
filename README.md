@@ -38,12 +38,152 @@ mkdir Python
 mkdir Java
 mkdir JavaScript
 ```
+
+>Revisar y ejecutar cada comando, hacerlo como practica
+
+
+# CLASE 2 MIÉRCOLES 3 DE ABRIL DEL 2024
+
+>Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hacerlo como administrador
+
+```sh
+touch vacio.txt #Crea un archivo con su extención: ESCRIBIR DENTRO
+
+ctrl + s #Guardamos lo que escribimos en el archivo
+
+./ #Significa la carpeta actual
+
+../ #Significa la carpeta anterior
+
+cat vacio.txt #Vemos el contenido del archivo
+
+history #Veremos la historia completa de los comandos que hemos utilizado
+
+!72 + enter #Veremos el comando que utilizamos en ese número
+
+rm vacio.txt #Borra el archivo seleccionado, ¡¡¡¡CUIDADO!!!!
+
+rm --help #Muestra como funciona el comando
+```
+
+>CREAR UN REPOSITORIO DE GIT Y HAZ TU PRIMER COMMIT
+
+```sh
+cd tecnicatura
+
+mkdir class-git
+
+cd class-git #Entramos en la carpeta que necesitamos trabajar
+
+git init #Creamos un repositorio en la carpeta central, se crea el archivo .git
+
+code .  #Abrimos VSC, el punto hace que se abra el archivo en el que estamos situados
+
+ctrl + n #Creamos un archivo nuevo y escribimos en el, como lo hicimos antes
+
+ctrl + s #Guardamos poniendo el nombre: historia.txt
+
+git status #Vemos el estado del proyecto en tiempo real, esta en el área de trabajo
+
+git add historia.txt #Enviamos el archivo al área de preparación
+
+git status #Para ver el estado de cambios
+
+git rm --cached historia.txt #Quitamos el archivo del área de preparación, cached significa que esta en memoria ram
+
+git config #Tedremos la lista de como funciona la configuración
+
+git config --list #Configuraciones por defecto, faltan cosas importantes
+
+git config --list --show-origin #Veremos donde están las configuraciones guardadas
+
+git config --global user.name "Ariel Betancud"
+
+git config --global user.email "betancudariel@gmail.com" #El correo debe ser el mismo que usaremos en GitHub
+
+git config --list #Ahora veremos que ya están todos los datos completos
+
+git add . #Ingresamos todos los archivos al área de preparación (ram)
+
+git commit -m "Mensaje importante del commit" #El primer commit esta hecho
+
+code . #Hacemos cambios en el archivo y guardamos
+
+git status #Hay cambios para commitear
+
+git add .
+
+git commit -m "Mi segundo commit"
+
+git log historia.txt #Vemos toda la historia de este archivo, el número largo es el hash del commit
+```
+
+>Revisar y ejecutar cada comando, hacerlo como practica
+
+
+# CLASE 3 MIÉRCOLES 10 DE ABRIL DEL 2024
+
+>Analizar cambios en los archivos de tu proyecto Git parte 3
+
+>Ingresamos de la siguiente manera:
+
 <sub>
+Abrir git bash en Window o la terminal de Linux o de Mac: al abrir Git Bash hacerlo como administrador, en terminal también o usar sudo para permisos especiales.
+</sub>
+
+```sh
+cd tecnicatura #Ingresamos al direcotorio donde están nuestras carpetas de trabajo
+
+ls #Vemos los archivos y directorios que ya tenemos
+
+cd git #No hay nada
+
+cd .. #Salimos
+
+rm historia.txt #Eliminamos el archivo que habíamos hecho, esto en git bash (window) esto es para practica
+
+rm Git #rm: cannot remove 'Git': Is a directory
+
+rm --recursive -R Git #By default, rm does not remove directories.  Use the --recursive (-r or -R) arguments
+
+option to remove each listed directory, too, along with all of its contents. Esto es para practica
+
+rm --help #Nos muestra lo que les puse arriba como documentación en Inglés.
+
+mkdir class-git #Creamos la carpeta o directorio para trabajar en Git local por ahora.
+
+cd class-git #Entramos para crear el README.md para este sector.
+
+touch README.md #Vamos a crear un archivo nuevo, md significa markdown y se pueden trabajar con editores de texto, este es un lenguaje que transforma el texto a html.
+
+Enlace a la documentación en GitHub de MARKDOWN
+
+Leemos la documentación para ir creando en README.md como lo enseña GitHub.
+
+code . #Abrimos VSC para editar el archivo.
+```
+
+>Empezamos a cargar lo visto en las clases anteriores (Comandos) en el README y pasamos a commitear
+
+```sh
+git status
+
+git add .
+
+git status
+
+git commit -m "Cargamos el README dentro del directorio class-git"
+
+git status
+
+git log #Para ver los dos commits hechos: Si tienes commiteada alguna clase anterior veras mas commits de los que yo tengo.
+
+cd ..
+
+cd ..
+
 Revisar y ejecutar cada comando, hacerlo como practica
-</sub>
-<sub>
-Profesor Ariel Betancud
-</sub>
+```
 
 
 # CLASE 4 MIÉRCOLES 17 DE ABRIL DEL 2024
@@ -96,7 +236,7 @@ cd ..
 cd ..
 ```
 
-# CLASE 5 MIÉRCOLES 8 DE MAYO DEL 2024
+# CLASE 6 MIÉRCOLES 8 DE MAYO DEL 2024
 
 
 >Volver en el tiempo en nuestro repositorio utilizando reset y checkout parte 6
@@ -168,7 +308,7 @@ cd ..
 cd ..
 ```
 
-# CLASE 6 MIÉRCOLES 15 DE MAYO DEL 2024
+# CLASE 7 MIÉRCOLES 15 DE MAYO DEL 2024
 
 
 >Git reset vs. Git rm parte 7
@@ -320,7 +460,7 @@ Crear cambios en el archivo creado, donde vamos a hacer varios commits, para ir 
 </sub>
 
 
-# CLASE 7 MIÉRCOLES 22 DE MAYO DEL 2024
+# CLASE 8 MIÉRCOLES 22 DE MAYO DEL 2024
 
 
 >Flujo de trabajo básico con un repositorio remoto parte 8
@@ -393,8 +533,8 @@ git log -S “Por contenido” #Buscar los commits con el contenido dentro del a
 git log > log.txt #guardar los logs en un archivo txt
 ```
 
-# CLASE 8 MIÉRCOLES 29 DE MAYO DEL 2024
 
+# CLASE 9 MIÉRCOLES 29 DE MAYO DEL 2024
 
 >Introducción a las ramas o branches de Git parte 9
 
@@ -561,8 +701,8 @@ q #Para salir
 git checkout segunda #Volvemos a ver todos los cambios que hicimos de nuevo
 ```
 
-# CLASE 8 MIÉRCOLES 5 DE JUNIO DEL 2024
 
+# CLASE 10 MIÉRCOLES 5 DE JUNIO DEL 2024
 
 >Fusión de ramas con Git merge parte 10
 
@@ -704,4 +844,131 @@ git commit -am "Cargamos esto ahora" #vamos a master y mergeamos
 git checkout master
 
 git merge segunda #y terminamos con esto
+```
+
+
+# CLASE 11 MIÉRCOLES 12 DE JUNIO DEL 2024 - Portafolio 5
+
+>Resolución de conflictos al hacer merge parte 11
+
+>Sección lectura
+
+<sub>
+Git nunca borra nada, a menos que nosotros se lo indiquemos. Cuando usamos los comandos git merge o git checkout estamos cambiando de rama o creando un nuevo commit, no borrando ramas ni commits (recuerda que puedes borrar commits con git reset y ramas con git branch -d).
+</sub>
+
+<sub>
+Git es muy inteligente y puede resolver algunos conflictos automáticamente: cambios, nuevas líneas, entre otros. Pero algunas veces no sabe cómo resolver estas diferencias, por ejemplo, cuando dos ramas diferentes hacen cambios distintos a una misma línea.
+</sub>
+
+<sub>
+Esto lo conocemos como conflicto y lo podemos resolver manualmente. Solo debemos hacer el merge, ir a nuestro editor de código y elegir si queremos quedarnos con alguna de estas dos versiones o algo diferente. Algunos editores de código como Visual Studio Code nos ayudan a resolver estos conflictos sin necesidad de borrar o escribir líneas de texto, basta con hacer clic en un botón y guardar el archivo.
+</sub>
+
+<sub>
+Recuerda que siempre debemos crear un nuevo commit para aplicar los cambios del merge. Si Git puede resolver el conflicto, hará commit automáticamente. Pero, en caso de no pueda resolverlo, debemos solucionarlo y hacer el commit.
+</sub>
+
+<sub>
+Los archivos con conflictos por el comando git merge entran en un nuevo estado que conocemos como Unmerged. Funcionan muy parecido a los archivos en estado Unstaged, algo así como un estado intermedio entre Untracked y Unstaged. Solo debemos ejecutar git add para pasarlos al área de staging y git commit para aplicar los cambios en el repositorio.
+</sub>
+
+>Cómo revertir un merge Si nos hemos equivocado y queremos cancelar el merge, debemos usar el siguiente comando:
+
+```sh
+git merge --abort
+```
+
+>Conflictos en repositorios remotos Al trabajar con otras personas, es necesario utilizar un repositorio remoto.
+­
+<sub>
+-Para copiar el repositorio remoto al directorio de trabajo local, se utiliza el comando git clone , y para enviar cambios al repositorio remoto se utiliza git push.
+</sub>
+
+<sub>
+-Para actualizar el repositorio local se hace uso del comando git fetch, luego se debe fusionar los datos traídos con los locales usando git merge.
+</sub>
+
+>Para traer los datos y fusionarlos a la vez, en un solo comando, se usa git pull.
+
+<sub>
+­- Para crear commits rápidamente, fusionando git add y git commit -m "", usamos git commit -am "".
+</sub>
+
+<sub>
+­- Para generar nuevas ramas, hay que posicionarse sobre la rama que se desea copiar y utilizar el comando git branch .
+</sub>
+
+>Para saltar entre ramas, se usa el comando git checkout
+
+<sub>
+­- Una vez realizado los cambios en la rama, estas deben fusionarse con git merge.
+</sub>
+
+<sub>
+El merge ocurre en la rama en la que se está posicionado. Por lo tanto, la rama a fusionar se transforma en la principal.
+</sub>
+
+<sub>
+Los merges también son commits.
+</sub>
+
+<sub>
+Los merges pueden generar conflictos, esto aborta la acción y pide que soluciones el problema manualmente, aceptando o rechazando los cambios que vienen.
+</sub>
+
+<sub>
+Repasa qué es un branch
+</sub>
+
+>Sección Práctica
+
+```sh
+git checkout segunda #falta lo que cargamos en master
+
+git merge master #traemos los cambios desde la master y tenemos las dos ramas actualizadas
+```
+
+<sub>
+Ahora vamos a crear un conflicto para ver como salimos de el, vamos a cargar datos nuevos creando archivos html y css estando en la rama segunda, y también vamos a hacer lo mismo estando en la master y veremos como lo solucionamos.
+</sub>
+
+<sub>
+Abrimos el html y modificamos estando en la rama segunda
+</sub>
+
+<sub>
+Luego commiteamos en la rama segunda y pasamos a la rama master, guardar y commitear, hacer un merge estando en master: pongo en orden los comandos abajo.
+</sub>
+
+```sh
+ctrl + s #Guardamos los cambios en la rama segunda, ponemos cambios en css
+
+git commit -am "Modifique el css y el color del texto" es un ejemplo
+
+git checkout master #Modificamos el html, ponemos código y css ponemos texto blue
+
+ctrl + s #Guardamos los cambios
+
+git commit -am "Agregue suscripción, cambie el código y puse todo azul en css"
+
+git merge segunda #Hacemos un merge estando en master y veremos el conflicto
+```
+
+<sub>
+Para solucionar el conflicto podemos abrir el archivo con el editor de texto y modificar lo que nos este señalando y guardamos, esto en el css y en el html, lo podemos hacer desde VSC seleccionando: el cambio entrante.
+</sub>
+
+<sub>
+Debemos ahora commitear estos cambios, abajo pongo los comandos.
+<sub>
+
+```sh
+git status
+
+git commit -am "Solución de conflictos al mergear las ramas"
+
+git checkout segunda #Seguiremos con la versión anterior, porque el merge fue en master
+
+git merge master #Ahora pasamos los cambios a la rama segunda.
 ```
